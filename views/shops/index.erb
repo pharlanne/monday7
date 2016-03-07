@@ -1,0 +1,7 @@
+<h1>Shops</h1>
+<ul>
+  <% @shops.each do |shop| %>
+    <li><a href="/shops/<%= shop.id %>"><%= shop.name %></a> supplier of  <%= shop.stock_kind %></li>
+  <% end %>
+</ul>
+<a href="/shops/new">Add Shop</a>

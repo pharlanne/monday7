@@ -1,0 +1,15 @@
+<% if(session['error_message']) %>
+  <p class="error">
+    <%= session['error_message'] %>
+  </p>
+  <% session.clear %>
+<% end %>
+
+<h1><%= @shop.name %></h1>
+<h2>Stock: <%= @shop.stock_kind %></h2>
+<a href="/shops/<%= @shop.id %>/edit">Edit Shop</a> 
+
+<h3>Pets</h3>
+<%= erb :"pets/index" %>
+<%= erb :"pets/new" %>
+
